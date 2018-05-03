@@ -1,0 +1,28 @@
+{
+    "list":[{
+        "name":"莆田卤面",
+        "address":"福州市台江区鳌峰路76号",
+        "tel":"18065041611",
+        "price":15,
+        "pic":"https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C20%2C690%2C418%3Bw%3D230%3Bq%3D80/sign=25eefb9b90dda144ce4636f28f87fc90/2cf5e0fe9925bc3175595e1059df8db1cb137035.jpg"
+    },{
+        "name":"蜜菓奶茶(福临东城店)",
+        "address":"福州市晋安区长乐中路96号王庄峰园（原王庄紫阳旧屋区改造）10#楼1层02号店面（乐西东公交车站往西10米）",
+        "tel":"15306919339",
+        "price":50,
+        "pic":"https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C1%2C719%2C435%3Bw%3D230%3Bq%3D80/sign=0ddec32f8a025aafc77d248bc6dd8755/f2deb48f8c5494ee2cd28af625f5e0fe98257e69.jpg"
+
+    },{
+        "name":"知味楼",
+        "address":"福州市仓山区后坂大街19号后坂小学往东100米处",
+        "tel":"13585833513",
+        "price":50,
+        "pic":"https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D26%2C0%2C638%2C387%3Bw%3D230%3Bq%3D79/sign=1acf0697bc8f8c54f79c9f6f071b1bd9/32fa828ba61ea8d34881b47d9f0a304e251f582c.jpg"
+    },{
+        "name":"三道杠披萨",
+        "address":"福州市台江区广达路168号世茂星天地负一楼午戈美食城3号铺（微云咖啡旁边）",
+        "tel":"17720748923",
+        "price":36,
+        "pic":"https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/crop%3D0%2C13%2C1024%2C620%3Bw%3D230%3Bq%3D80/sign=e4e1e6af71310a55d06b84b48a756f98/11385343fbf2b21180c4f912c28065380dd78e87.jpg"
+    }]
+}
