@@ -1,6 +1,4 @@
-# test
-
-> test
+# vue2.0简单搭建项目
 
 ## Build Setup
 
