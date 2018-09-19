@@ -1,14 +1,6 @@
 <template>
 	<div class="page-city">
-		<swiper :options="swiperOption" class="swiper-box">
-	       <swiper-slide class="swiper-item">
-	           <img src="../../assets/img_city_350500@2x.png" alt="">
-	       </swiper-slide>
-	       <swiper-slide class="swiper-item">
-	           <img src="../../assets/img_city_350900@2x.png" alt="">
-	       </swiper-slide>
-	       <div class="swiper-pagination" slot="pagination"></div>
-	   </swiper>
+		<swiper :list="list" v-show="list.length > 0" direction="horizontal" :min-moving-distance="20" height="5rem" :show-dots="true" :show-desc-mask="false" dots-position="center"></swiper>
 	   <div class="top-nav">
 			<router-link :to="{name:'list', params: {type:1}}">
 				<i class="icon-city-dine"></i>
@@ -28,7 +20,9 @@
 	    	<div class="nearby-sence-con">
 	    		<div class="nearby-sence-item" v-for="(item,index) in foods">
 		            <router-link :to="{name:'detail',params:{id:index}}">
-		            	<img v-lazy="item.pic">
+		            	<div class="shop-img">
+		            		<img v-lazy="item.pic">
+		            	</div>
 		            </router-link>
 		            <div class="nearby-sence-item-title">
 						<span class="place">{{item.name}}</span>
@@ -36,33 +30,29 @@
 	          </div>
 	    	</div>
 	    </div>
-	    <router-view></router-view>
 	    <ly-footer></ly-footer>
 	</div>
 </template>
 <script>
-import lyFooter from '../../components/footer';
-import '../../../static/lib/swiper/swiper.min.css';
-import list from '../../assets/data.json';
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+import lyFooter from '@/components/footer';
+import {Swiper} from 'vux';
+import list from '@/assets/data/data.json';
 export default{
 	components: {
-		foods:[],
-		lyFooter,
-	  	swiper,
-	  	swiperSlide
+		Swiper,
+		lyFooter
 	},
 	created(){
         this.initData();
     },
 	data(){
 		return{
-			swiperOption: {
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
-                loop : true,
-                autoplay : 3000
-            }
+			foods:[],
+			list:[{
+				img:'http://www.fjta.com/static/app/cover2.3/img_city_350100@2x.png'
+			},{
+				img:'http://www.fjta.com/static/app/cover2.3/img_city_350400@2x.png'
+			}]
 		}
 	},
 	methods:{

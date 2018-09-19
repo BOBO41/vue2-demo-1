@@ -18,7 +18,7 @@
         props:['title','isSearch','fun']
 	}
 </script>
-<style lang="scss" scoped>
+<style lang="less" scoped>
 /* 头部 */
 .ly-header{
     height: 88px;

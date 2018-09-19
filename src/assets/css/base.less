@@ -2,8 +2,8 @@
 @charset "utf-8";
 html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,hr,figure,table,caption,th,td,form,input,button,textarea{margin:0;padding:0;}
 html{font-family:"Helvetica Neue", "Helvetica", "Heiti SC", "Droid Sans Fallback", "sans-self";-webkit-text-size-adjust:100%;}
-body{font-size: 28px;line-height:1.5;color:#333}
-html, body{min-height: 100%;}
+body{font-size:28px;color:#333;line-height:1.5;}
+html,body{min-height: 100%;background:#f2f4f5;}
 header,footer,section,article,aside,nav,address,figure,details,marquee{display: block;}
 table{border-collapse:collapse;border-spacing:0;}
 caption,th{text-align:left;font-weight:normal;}
@@ -16,31 +16,17 @@ img{vertical-align:middle;max-width:100%;}
 ul,li{list-style:none;text-decoration: none;}
 h1,h2,h3,h4,h5{font-weight: normal;font-size: inherit;}
 input,textarea,select{-webkit-appearance: none;}
-input,textarea,a,button{ -webkit-tap-highlight-color:transparent;}
-textarea{resize:none;}
+input,textarea,a,button,label{ -webkit-tap-highlight-color:transparent;}
 em{font-style:normal;}
+textarea{resize:none;}
 /* common */
+.fn-left{float:left;}
+.fn-right{float:right;}
+.fn-clear:after{content:" ";height:0;visibility:hidden;display:block;clear:both;}
+.fn-middle{display:inline-block;vertical-align:middle;}
+.fn-ell{overflow:hidden;text-overflow: ellipsis;white-space:nowrap;}
 a.ui-btn,.ui-btn{display:inline-block;text-align:center;border-radius:6px;}
 .ui-mask{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.6);z-index:99}
 [class*="icon"] {
-    display: inline-block;background-repeat:no-repeat;
-    
-}
-[class*="page"] {
-    min-height:100vh;
-    box-sizing:border-box;
-}
-.border-new:before{
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-transform-origin: left top;
-    transform-origin: left top;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
+	display: inline-block;background-repeat:no-repeat;
 }

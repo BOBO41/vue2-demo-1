@@ -1,19 +1,21 @@
 <template>
 	<div class="page-detail">
-		<my-header></my-header>
+		<my-header title="详情"></my-header>
 		<div class="lt-block main">
 			<img :src="pic" alt="">
 			<div class="info-box">
-				<p class="title">{{name}}</p>
-				<p class="tel"><a :href="'tel:'+tel"></a><span class="icon-box"><i class="icon-hotel-phone"></i></span>{{tel}}</a></p>
-				<p><span class="icon-box"><i class="icon-guide"></i></span>{{address}}</p>
+				<div class="info-header">
+					<p class="title">{{name}}</p>
+					<p class="tel"><a :href="'tel:'+tel"></a><span class="icon-box"><i class="icon-phone"></i></span>{{tel}}</a></p>
+				</div>
+				<p><span></span>{{address}}</p>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
-	import myHeader from '../../components/header';
-	import list from '../../assets/data.json';
+	import myHeader from '@/components/header';
+	import list from '@/assets/data/data.json';
 	export default{
 		components:{
 			myHeader
@@ -31,6 +33,8 @@
 </script>
 <style lang="less" scope>
 	.page-detail{
+		height:100vh;
+		background:#fff;
 		.main{
 			img{
 				width:100%;
@@ -38,12 +42,15 @@
 		}
 		.info-box{
 			padding:20px;
-			p{
+			.info-header{
 				display:flex;
-				align-items:center;
+				margin-bottom:20px;
+				justify-content: space-between;
 				line-height:50px;
 			}
 			.tel{
+				display:flex;
+				align-items:center;
 				color:#00b7ff;
 			}
 			.icon-box{

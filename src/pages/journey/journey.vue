@@ -18,7 +18,7 @@
 	</div>
 </template>
 <script>
-	import lyFooter from '../../components/footer';
+	import lyFooter from '@/components/footer';
 	export default{
 		data(){
 			return{
@@ -78,16 +78,16 @@
 			//制定行程
 			create(){
 				if(this.selected.length === 0){
-					this.toast('请选择城市');
+					this.$toast('请选择城市');
 				}else if(this.day === 0){
-					this.toast('选择天数为0');
+					this.$toast('选择天数为0');
 				}else{
-					this.toast('暂无开发');
+					this.$toast('暂无开发');
 				}
 			}
 		}
 	}
 </script>
 <style lang="less" scoped>
-	@import './journey.less';
+	@import 'journey.less';
 </style>

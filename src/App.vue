@@ -1,23 +1,18 @@
 <template>
-    <div id="app">
-        <!-- 切入路由的动画 -->
-        <transition name="fade" mode="out-in">
-            <router-view></router-view>
-        </transition>
-    </div>
+	<div id="app">
+		<transition name="fade" mode="out-in">
+			<router-view></router-view>
+		</transition>
+	</div>
 </template>
-<script>
-    export default {
-        name:'app',
-        data(){
-            return{
 
-            }
-        }
-    }
+<script>
+export default {
+	name: 'App'
+}
 </script>
 <style lang="less">
-@import "./utils/base.less";
-@import "./utils/layout.less";
-@import "./utils/sprite.less";
+@import "./assets/css/base.less";
+@import "./assets/css/layout.less";
+@import "./assets/css/sprite.less";
 </style>

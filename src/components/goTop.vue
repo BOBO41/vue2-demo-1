@@ -1,9 +1,8 @@
 <!-- 回到顶部组件 -->
 <template>
-	<i @click="goTop()" v-if="isShowTop" class="icon go_top"></i>
+	<i @click="goTop()" v-if="isShowTop" class="icon go-top"></i>
 </template>
 <script>
-    import {showTop,goTop} from '../utils/util';
 	export default{
 		data(){
 			return{
@@ -11,13 +10,24 @@
 			}
 		},
 		created(){
-			showTop((status) => {
-                this.isShowTop = status;
-            });
+            window.addEventListener('scroll',() => {
+            	this.isShowTop = document.body.scrollTop > 500 ? true : false;
+		    });
 		},
 		methods:{
 			goTop(){
-				goTop();
+				let doc = document.body.scrollTop ? document.body : document.documentElement;
+			    let scrollTop = doc.scrollTop;
+			    let top = function () {
+			        scrollTop = scrollTop + (0 - scrollTop) / (rate || 2);
+			        if (scrollTop < 1) {
+			            doc.scrollTop = 0;
+			            return false;
+			        }
+			        doc.scrollTop = scrollTop;
+			        stop = requestAnimationFrame(top);    
+			    };
+			    top();
 			}
 		}
 	}

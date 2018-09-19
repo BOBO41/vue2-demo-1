@@ -10,29 +10,28 @@
 					<div class="shop-info">
 						<div class="shop-title">
 							<div class="name">{{item.name}}</div>
-							<div class="price">
+							<div class="price" v-if="item.price">
 								<em>￥</em>{{item.price}}<em>起</em>		
 							</div>
 						</div>
-						<p class="content">
-						</p>
 						<p class="content">地址：{{item.address}}</p>
-						<p class="content">电话：{{item.tel}}</p>
+						<p class="content" v-if="item.tel">电话：{{item.tel}}</p>
 					</div>	
 				</router-link>
 			</div>
 		</div>
+		<router-view name="a"></router-view>
 	</div>
 </template>
 <script>
-import myHeader from '../../components/header';
-import list from '../../assets/data.json';
+import myHeader from '@/components/header';
+import list from '@/assets/data/data.json';
 export default{
 	components:{
 		myHeader
 	},
 	created(){
-		this.fetchData();
+		this.list = list.list;
 	},
 	data(){
 		return{
@@ -41,11 +40,8 @@ export default{
 		}
 	},
 	methods:{
-		fetchData(){
-			this.list = list.list;
-		},
 		search(){
-			this.toast('暂未开放');
+			this.$toast('暂未开放');
 		}
 	}
 }

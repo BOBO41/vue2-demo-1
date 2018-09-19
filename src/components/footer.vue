@@ -31,7 +31,7 @@
     }
 </script>
 <style lang="less" scoped>
-@import (reference) "../utils/sprite.less";
+@import (reference) "../assets/css/sprite.less";
 .nav{
   position: fixed;
   bottom: 0;

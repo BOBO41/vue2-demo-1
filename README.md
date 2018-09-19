@@ -1,4 +1,6 @@
-# vue2.0简单搭建项目
+# demo
+
+> 使用vue-cli2.9.6来搭建项目,在搭建项目中加入px2remLoader来自动转成rem、雪碧图
 
 ## Build Setup
 
@@ -24,9 +26,6 @@ You'll see something like this:
 ├── build/
 │   ├── build.js                               // 运行 npm run build 配置等
 │   ├── check-version.js                       // 检查 node npm 版本信息
-│   ├── dev-client.js                          // 浏览器热刷新
-│   ├── dev-server.js                          // 代码热加载配置
-│   ├── mock.js                                // Mock数据模拟配置
 │   ├── utils.js                               // css-loader配置
 │   ├── vue-loader.conf.js                     // vue-loader配置
 │   ├── webpack.base.conf.js                   // webpack打包基础配置
@@ -41,7 +40,6 @@ You'll see something like this:
 ├── dist/                                      // 打包生成文件存放目录
 ├── node_modules/                              // 你懂的
 ├── src/                                       // 存放项目内容
-│   ├── api/                                   // api接口
 │   ├── assets/                                // 项目资源图片或者是非第三方文件，可创建文件夹，这里的资源会被wabpack构建
 │   ├── components/                            // 组件，可创建文件夹
 │   ├── pages/                                 // pages 文件
@@ -49,7 +47,7 @@ You'll see something like this:
 │   │       ├── index.vue/                     // vue文件
 │ 	├── router/								   // vue-router路由管理
 │ 	├── store/								   // vuex的状态管理
-│ 	├── utils/								   // 通用css、js和雪碧图模板文件
+│ 	├── utils/								   // 雪碧图模板文件
 │ 	├── App.vue								   // 根组件
 │ 	├── main.js								   // 入口js文件
 ├── static/                                    // 纯静态资源，不会被wabpack构建，必须使用绝对路径引用这些文件,一般放第三方文件

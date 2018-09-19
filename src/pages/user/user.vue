@@ -1,6 +1,6 @@
 <template>
 	<div class="page-user">
-		<img class="headpic" src="../../assets/headpic.png" alt="">
+		<img class="headpic" src="@/assets/images/headpic.png" alt="">
 		<p>你好，欢迎!</p>
 		<ly-footer></ly-footer>
 	</div>
@@ -15,6 +15,7 @@
 </script>
 <style lang="less" scope>
 .page-user{
+	height:100vh;
 	display:flex;
 	justify-content:center;
 	align-items:center;
